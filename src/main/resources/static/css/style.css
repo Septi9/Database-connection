@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #555;
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    text-align: center;
+    background-color: #333;
+    width: 40%;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 5vh auto;
+}
+
+h1 {
+    color: #FFF;
+    margin: 5% 0;
+}
+
+.action {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    padding: 10px;
+    text-decoration: none;
+    color: #FFF;
+    border-bottom: 2px solid #FFF;
+    transition: .3s;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+ form table {
+    margin: 0 auto;
+    width: 60%;
+}
+
+form tr {
+    width: 100%;
+}
+
+form td {
+    padding: 10px 0;
+    color: #FFF;
+}
+
+input {
+    padding: 2px 0;
+}
+
+select {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    padding: 2px 0;
+}
+
+button {
+    width: 60%;
+    padding: 10px 0;
+    margin: 20px 0 0 0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: greenyellow;
+}
+
+.loc {
+    width: 100%;
+    color: #FFF;
+    margin: 0 0 50px 0;
+}
+
+.loc tr {
+    width: 100%;
+}
+
+.loc th {
+    width: 100%;
+    padding: 5px;
+}
+
+.loc a {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: greenyellow;
+    transition: .3s;
+}
+
+.loc a:hover {
+    color: #FFF;
+}
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8"/>
+  <title>Locations</title>
+  <link th:href="@{static/css/style.css}" href="../static/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div align="center">
+  <div class="main">
+  <h1>List of locations</h1>
+  <a class="action" href="/insert">Enter New Location</a><br/>
+    <a class="action" href="/">Menu</a>
+  <br/><br/>
+  <table border="1" cellpadding="10" class="loc">
+    <tr>
+      <th>location_id</th>
+      <th>street_address</th>
+      <th>postal_code</th>
+      <th>city</th>
+      <th>state_province</th>
+      <th>country_id</th>
+      <th>action</th>
+    </tr>
+    <tr th:each="location: ${locationList}">
+      <td th:text="${location.location_id}"/>
+      <td th:text="${location.street_address}"/>
+      <td th:text="${location.postal_code}"/>
+      <td th:text="${location.city}"/>
+      <td th:text="${location.state_province}"/>
+      <td th:text="${location.country_id}"/>
+      <td>
+        <a th:href="@{/update/{location_id}(location_id=${location.location_id})}">Edit</a>
+        <a th:href="@{/delete/{location_id}(location_id=${location.location_id})}">Delete</a>
+      </td>
+    </tr>
+  </table>
+  </div>
+</div>
+</body>
+</html>

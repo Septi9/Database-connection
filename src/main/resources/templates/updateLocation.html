@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:form="">
+<head>
+    <meta charset="utf-8"/>
+    <title>New Location</title>
+    <link th:href="@{../static/css/style.css}" href="../static/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div align="center">
+    <div class="main">
+    <h1>Update Location</h1>
+    <br/>
+    <form action="/" th:action="@{/save}" th:object="${location}"
+          method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Location id</td>
+                <td>
+                    <input type="text" th:field="*{location_id}" readonly="readonly"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Street address</td>
+                <td>
+                    <input type="text" th:field="*{street_address}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Postal code</td>
+                <td>
+                    <input type="text" th:field="*{postal_code}"  />
+                </td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>
+                    <input type="text" th:field="*{city}" />
+                </td>
+            </tr>
+            <tr>
+                <td>State province</td>
+                <td>
+                    <input type="text" th:field="*{state_province}" />
+                </td>
+            </tr>
+            <tr>
+                <td>Country id</td>
+                <td>
+                    <select name="country_id">
+                        <option value="CA">CA</option>
+                        <option value="DE">DE</option>
+                        <option value="UK">UK</option>
+                        <option value="US">US</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save</button> </td>
+            </tr>
+
+        </table>
+    </form>
+    </div>
+</div>
+</body>
+</html>

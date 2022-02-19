@@ -1,0 +1,7 @@
+#Not needed files
+.idea/
+pom.xml
+target/
+
+#logs
+src/main/resources/application.properties
